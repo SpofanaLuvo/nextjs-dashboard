@@ -72,7 +72,6 @@ export async function updateInvoice(
   prevState: State,
   formData: FormData,
 ) {
-
   const validatedFields = UpdateInvoice.safeParse({
     customerId: formData.get('customerId'),
     amount: formData.get('amount'),
@@ -112,7 +111,6 @@ export async function deleteInvoice(id: string) {
     return { message: 'Database Error: Failed to Delete Invoice.' };
   }
 }
-
 
 export async function authenticate(
   prevState: string | undefined,
